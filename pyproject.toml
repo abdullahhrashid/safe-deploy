@@ -1,0 +1,21 @@
+[project]
+name = "safe-deploy"
+version = "0.1.0"
+description = "Blue-green Docker deployments with a TUI for SME apps"
+requires-python = ">=3.10"
+dependencies = [
+    "textual>=0.86",
+    "docker>=7.1",
+    "pyyaml>=6.0",
+    "click>=8.1",
+]
+
+[project.scripts]
+safe-deploy = "safe_deploy.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["safe_deploy*"]

@@ -1,0 +1,23 @@
+network: safe-deploy
+
+apps:
+  - name: web
+    image: nginx
+    tag: stable
+    container_port: 80
+    host_port: 8080
+    healthcheck:
+      path: /
+      timeout_s: 30
+      expect_status: 200
+    env:
+      ENVIRONMENT: production
+
+  - name: api
+    image: kennethreitz/httpbin
+    tag: latest
+    container_port: 80
+    host_port: 8081
+    healthcheck:
+      path: /status/200
+      timeout_s: 30
