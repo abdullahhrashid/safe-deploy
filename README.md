@@ -72,7 +72,7 @@ When you deploy a new version (e.g., `safe-deploy up web --tag 1.4.2`), the engi
 **Install from source:**
 
 ```bash
-git clone <your-clone-url> safe-deploy
+git clone https://github.com/abdullahhrashid/safe-deploy.git safe-deploy
 cd safe-deploy
 python -m venv .venv
 . .venv/bin/activate
